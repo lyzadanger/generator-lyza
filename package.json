@@ -17,5 +17,8 @@
     "chai": "^3.4.0",
     "mocha": "^2.3.3",
     "yeoman-assert": "^2.1.0"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec --timeout 3000"
   }
 }
