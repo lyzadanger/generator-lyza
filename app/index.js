@@ -17,8 +17,7 @@ module.exports = generators.Base.extend({
     {
       type: 'input',
       name: 'tags',
-      message: 'Space-separated tags (opt.)',
-      default: ''
+      message: 'Space-separated tags (opt.)'
     },
     {
       type: 'input',
@@ -32,7 +31,7 @@ module.exports = generators.Base.extend({
       message: 'Publish immediately?',
       default: false
     }], function (answers) {
-      answers.tags = answers.tags.split(' ');
+      answers.tags = (answers.tags) ? answers.tags.split(' ') : [];
       answers.status = (answers.status) ? 'published' : 'draft';
       this.choices = answers;
       done();

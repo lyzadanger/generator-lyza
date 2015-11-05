@@ -20,6 +20,7 @@ describe('default generator: blog', function () {
 
     it('creates a file with a default title', function () {
       assert.file('src/content/drafts/i-need-a-title/index.md');
+      assert.noFileContent('src/content/drafts/i-need-a-title/index.md', 'tags');
     });
   });
 
