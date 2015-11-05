@@ -6,6 +6,11 @@ module.exports = generators.Base.extend({
   constructor: function () {
     generators.Base.apply(this, arguments);
   },
+  initializing: function () {
+    this.config.defaults({
+      "postDir": "src/content/drafts"
+    });
+  },
   prompting: function () {
     var done = this.async();
     this.prompt([{
@@ -42,7 +47,7 @@ module.exports = generators.Base.extend({
       var postSlug = slug(this.choices.title, { lower: true });
       this.fs.copyTpl(
         this.templatePath('post.md'),
-        this.destinationPath('src/content/drafts/' + postSlug + '/index.md'),
+        this.destinationPath(this.config.get('postDir') + '/' + postSlug + '/index.md'),
         this.choices
       );
     }
