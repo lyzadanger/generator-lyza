@@ -1,0 +1,16 @@
+{
+  "name": "generator-lyza",
+  "version": "0.1.0",
+  "description": "Generator for blog posts and pages, uninteresting to anyone but Lyza",
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "slug": "^0.9.1",
+    "yeoman-generator": "^0.20.2"
+  }
+}
