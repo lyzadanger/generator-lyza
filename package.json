@@ -12,5 +12,10 @@
     "lodash": "^3.10.1",
     "slug": "^0.9.1",
     "yeoman-generator": "^0.20.2"
+  },
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "mocha": "^2.3.3",
+    "yeoman-assert": "^2.1.0"
   }
 }
