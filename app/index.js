@@ -11,7 +11,8 @@ module.exports = generators.Base.extend({
     this.prompt([{
       type: 'input',
       name: 'title',
-      message: 'Blog post title'
+      message: 'Blog post title',
+      default: 'I need a title'
     },
     {
       type: 'input',

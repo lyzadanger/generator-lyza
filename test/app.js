@@ -5,11 +5,10 @@ var assert = require('yeoman-assert');
 var chai   = require('chai');
 var expect = chai.expect;
 
-describe('general', function () {
+describe('default generator: blog', function () {
   describe('core functionality', function () {
     before(function (done) {
       helpers.run(path.join(__dirname, '../app'))
-        .withPrompts({ title: "Test Blog Post" })
         .inDir(path.join(__dirname, 'temp'))
         .on('end', done);
     });
@@ -19,12 +18,9 @@ describe('general', function () {
       require('../app');
     });
 
-    // it('creates expected files', function () {
-    //   assert.file([
-    //     'src/content/'
-    //   ]);
-    // });
-
+    it('creates a file with a default title', function () {
+      assert.file('src/content/drafts/i-need-a-title/index.md');
+    });
   });
 
 });
